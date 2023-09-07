@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let dia, mes, año;
+
+        do {
+            dia = parseInt(prompt("Ingresa el día de tu cumpleaños:"));
+            mes = parseInt(prompt("Ingresa el mes de tu cumpleaños:"));
+            año = parseInt(prompt("Ingresa el año de tu cumpleaños:"));
+
+         
+            if (
+                !isNaN(dia) &&
+                !isNaN(mes) &&
+                !isNaN(año) &&
+                dia >= 1 &&
+                dia <= 31 &&
+                mes >= 1 &&
+                mes <= 12 &&
+                año >= 1990
+            ) {
+                break; 
+            } else {
+                
+                alert("Fecha de cumpleaños no válida. Asegúrate de ingresar valores numéricos válidos.");
+            }
+        } while (true);
+        alert("Fecha de cumpleaños válida:", dia + "/" + mes + "/" + año);
+    
+    </script>
+
+</body>
+
+</html>
